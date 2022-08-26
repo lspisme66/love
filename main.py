@@ -72,7 +72,7 @@ def get_weather2(): #男方天气
   return weather['weather'], math.floor(weather['temp']),math.floor(weather['low']),math.floor(weather['high']),dates,weather['wind']
  
 def get_count():
-  delta = today - datetime.strptime(start_date, "%Y/%m/%d")
+  delta = today - datetime.date.strptime(start_date, "%Y/%m/%d")
   return delta.days
 
 def get_birthday():
