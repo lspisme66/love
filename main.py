@@ -16,8 +16,8 @@ city = os.environ['CITY']
 city2 = os.environ['CITY2']
 birthday = os.environ['BIRTHDAY']
 birthday2 = os.environ['BIRTHDAY2']
-astro = os.environ["ASTRO"]
-astro2 = os.environ["ASTRO2"]
+#astro = os.environ["ASTRO"]
+#astro2 = os.environ["ASTRO2"]
 user_id = os.environ["USER_ID"]
 user_id2 = os.environ["USER_ID2"]
 
@@ -130,7 +130,7 @@ data2 = {"city":{"value":city2},
         "high2":{"value":high2,"color":get_random_color()}, # 男方天气高温
         "birthday_left2":{"value":get_birthday2(),"color":get_random_color()}, # 男方生日
          "birthday_left":{"value":get_birthday(),"color":get_random_color()}, # 女方生日
-        "lucky2":{"value":lucky2(),"color":get_random_color()},  # 男方星座
+        #"lucky2":{"value":lucky2(),"color":get_random_color()},  # 男方星座
         "love_days":{"value":get_count(),"color":get_random_color()}, # 恋爱日
         "words":{"value":get_words(), "color":get_random_color()} #彩虹屁
 }
