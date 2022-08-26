@@ -11,7 +11,7 @@ app_secret = os.environ["APP_SECRET"]
 template_id = os.environ["TEMPLATE_ID"]
 template_id2 = os.environ["TEMPLATE_ID2"]
 today = datetime.now()
-#start_date = os.environ['START_DATE']
+start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 city2 = os.environ['CITY2']
 birthday = os.environ['BIRTHDAY']
@@ -76,13 +76,13 @@ def get_count():
   return delta.days
 
 def get_birthday():
-  next = datetime.strptime(str(date.today().year) + "-" + birthday, "%m-%d")
+  next = datetime.strptime(str(date.today().year) + "-" + birthday, "%Y-%m-%d")
   if next < datetime.now():
     next = next.replace(year=next.year + 1)
   return (next - today).days + 1
 
 def get_birthday2():
-  next = datetime.strptime(str(date.today().year) + "-" + birthday2, "%m-%d")
+  next = datetime.strptime(str(date.today().year) + "-" + birthday2, "%Y-%m-%d")
   if next < datetime.now():
     next = next.replace(year=next.year + 1)
   return (next - today).days + 1
